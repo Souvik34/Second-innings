@@ -10,7 +10,7 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
 import Gethome from "./components/Gethome";
- import Gallery from "./components/gallery";
+import Gallery from "./components/gallery.jsx";
 import Adopt from "./components/Adopt";
 import Volunteer from "./components/Volunteer";
 // import Faq from "./components/Faq";
@@ -111,7 +111,10 @@ function App() {
               path="ruleandregulation"
               element={<RuleandRegulation key="ruleandregulation" />}
             ></Route>
-             <Route exact path="gallery" element= {<Gallery/>}/>
+             <Route 
+             exact 
+             path="gallery" 
+             element= {<Gallery key="gallery"/>}/>
             <Route
               exact
               path="signin"
