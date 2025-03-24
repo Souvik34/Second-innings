@@ -20,8 +20,7 @@
     /* background-image: url("../images/background.png"); */
 }
 .contact-form {
-    position: relative;
-    padding: 45px 0 45px 60px;
+    position: relative
 }
 
 .contact-form:before {
@@ -165,7 +164,6 @@ ul.contact-info li {
 
 .info-right h4 {
     color: #fff;
-    font-size: 18px;
 }
 .contact-page .info-left i{
 color: #03a9f4;
@@ -205,9 +203,6 @@ display: inline-block;
 }
 
 @media only screen and (max-width: 767px) {
-.contact-form {
-    padding: 30px;
-}
 .contact-form:before {
     width: 100%;
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useTheme } from "../context/ThemeContext";
-import "./styles/adopt.css";
 import { Link} from "react-router-dom";
 
 function Adopt() {
@@ -37,17 +36,17 @@ function Adopt() {
           </div>
         </h2>
 
-<div className="row mb-5 text-light fs-4">Do you think your residence could benefit from staying connected through our "Adopt Parent" program? If so, then register your care home today. <br /> Fill out the following form, and a member of your family will be in touch should be in touch for the complete process.</div>
+<div className="mb-5 sub-text text-light">Do you think your residence could benefit from staying connected through our "Adopt Parent" program? If so, then register your care home today. <br /> Fill out the following form, and a member of your family will be in touch should be in touch for the complete process.</div>
 
-  <div  className="row mb-4">
+  <div  className="mb-4">
     <div  className="col">
-      <div  className="form-inline">
+      <div  className="form-outline mb-4">
         <input type="text" id="form6Example1"  className={`form-control ${theme === "light" ? "bg-white text-dark" : "bg-dark text-light"}`} placeholder='First Name' />
         <label  className="form-label" for="form6Example1"></label>
       </div>
     </div>
     <div  className="col">
-      <div  className="form-outline">
+      <div  className="form-outline mb-4">
         <input type="text" id="form6Example2"  className={`form-control ${theme === "light" ? "bg-white text-dark" : "bg-dark text-light"}`} placeholder='Last Name' />
         <label  className="form-label" for="form6Example2"></label>
       </div>

@@ -84,8 +84,11 @@ export default function Testimonial() {
         </div>
       </h2>
       <Swiper
-        slidesPerView={2}
-        spaceBetween={30}
+        breakpoints={{
+          480: { slidesPerView: 1, spaceBetween: 10 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 30 },
+        }}
         autoplay={{ delay: 2000 }}
         pagination={{ clickable: true }}
         navigation={true}
@@ -94,19 +97,23 @@ export default function Testimonial() {
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className={`swiper-client bg-${theme} ${theme === "dark" ? "text-white" : "text-dark"}`}>
+            <div
+              className={`swiper-slide swiper-client bg-${theme} ${
+                theme === "dark" ? "text-white" : "text-dark"
+              }`}
+            >
               <div className="mycard shadow rounded">
                 <p className="review-text">
                   <i className="fa-solid fa-quote-left quote" style={{ color: "#ff8a8a" }}></i>
                   {testimonial.text}
                 </p>
-                <div className="review-details row mt-4">
-                  <div className="col-md-6 image d-flex mx-auto px-4">
+                <div className="review-details">
+                  <div className="image d-flex mx-auto justify-content-center">
                     <figure>
                       <img className="user" src={testimonial.img} alt={testimonial.name} />
                     </figure>
-                    <div className="mt-3 mx-3 data mb-5">
-                      <p className="name fw-bold">{testimonial.name}</p>
+                    <div className="d-flex flex-column  justify-content-center mx-3 data">
+                      <p className="name fw-bold mb-2">{testimonial.name}</p>
                       <p className="post">{testimonial.location}</p>
                     </div>
                   </div>

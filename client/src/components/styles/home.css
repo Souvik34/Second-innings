@@ -7,6 +7,7 @@
   transform: scaleX(-1);
 }
 .sub-text {
+  font-size:1.25rem;
   text-align: justify;
 }
 .btn {
@@ -44,9 +45,7 @@
   margin-top: 8rem;
 }
 
-.homeCar{
-  margin-top: 5.5%;
-}
+
 
 
 
@@ -94,4 +93,50 @@
 /* Set the color of the text area */
 .text-area h1 {
   color: #fff;
+}
+
+.row {
+  padding: 0 100px;
+  display:flex;
+  justify-content:space-between;
+  width: 100%;
+}
+.btn-group{
+  display:flex;
+  gap:30px;
+}
+
+@media (
+  max-width:992px){
+   .row{
+    padding: 0 50px;  
+    flex-direction: column;
+   }
+   .image-container{
+    display:none;
+  }
+}
+
+
+@media (max-width: 768px){
+  .row{
+    padding:0 25px;
+  }
+  .sub-text{
+    font-size: 1rem;
+  }
+  .btn-group{
+    flex-direction: column;
+    gap:0px;
+  }
+}
+
+@media (max-width: 484px){
+  .row{
+    padding: 0 10px;
+  }
+  
+.main-head{
+  font-size: 60px;
+  }
 }

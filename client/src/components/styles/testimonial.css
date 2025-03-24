@@ -64,13 +64,17 @@ body {
 }
 
 .review-text {
-  text-align: justify;
   font-size: 0.9rem;
-  padding: 2rem;
+  margin: 2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .data {
-  text-align: left;
   font-size: 0.8rem;
 }
 
