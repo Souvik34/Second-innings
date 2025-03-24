@@ -108,8 +108,8 @@ export default function SignUp() {
   return (
     <>
       <div className="main">
-        <div className="row d-flex mx-auto">
-          <div className="text col-sm-6 px-5">
+        <div className="row d-flex mx-auto align-items-center">
+          <div className="text col-lg-6 px-5">
             <div className="codebird">
               <h1 className="text-brown">
                 S<span className="text-warning">ign</span>Up
@@ -277,7 +277,7 @@ export default function SignUp() {
                       />
                   </li>
                   <li  className="w-100 d-flex justify-content-center mt-3">
-                      Already have an account? <a href="/signin">Sign In Here.</a>
+                      Already have an account? <a className="mx-1" href="/signin">Sign In Here.</a>
                   </li>
                     
                   {/* </div> */}
@@ -286,7 +286,7 @@ export default function SignUp() {
             </div>
           </div>
 
-          <div className="anim col-sm-6 img-fluid mx-auto d-flex">
+          <div className="img-container anim col-lg-6 img-fluid mx-auto d-flex align-items-center justify-content-center">
             <img
               className="home-anim rounded img-fluid mx-auto d-flex"
               src={graphic}

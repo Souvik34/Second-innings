@@ -87,7 +87,7 @@ function Adopt() {
     <div className='d-block mx-auto text-center'>
   <a type="submit" href="mailto: secondinnings23@gmail.com" className={`btn ${theme === "light" ? "btn-primary" : "btn-light"} m-4`}>Submit</a>
   <br></br>
-  <Link to="/ruleandregulation" className='text-danger fs-2'>*** Rules & Regulations!!! ***</Link>
+  <Link to="/ruleandregulation" className='text-danger d-flex justify-content-left fs-2'>*** Rules & Regulations!!! ***</Link>
   </div>
 </form>
 </>

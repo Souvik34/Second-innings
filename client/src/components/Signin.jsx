@@ -58,7 +58,7 @@ export default function Signin() {
     <>
       <div className="main mt-5">
         <div className="row d-flex mx-auto align-items-center">
-          <div className="text  col-lg-6">
+          <div className="text col-lg-6">
             <div className="codebird">
             <h1 className="text-brown main-head service-head">
                 <span className="text-warnin" style={{ color: "#15A6BA", fontWeight:"700" }}>
