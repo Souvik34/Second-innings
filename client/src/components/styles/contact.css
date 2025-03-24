@@ -20,7 +20,7 @@
     /* background-image: url("../images/background.png"); */
 }
 .contact-form {
-    position: relative
+    position: relative;
 }
 
 .contact-form:before {

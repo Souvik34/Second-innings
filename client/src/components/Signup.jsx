@@ -276,8 +276,8 @@ export default function SignUp() {
                         value="Sign Up"
                       />
                   </li>
-                  <li  className="w-100 d-flex justify-content-center mt-3">
-                      Already have an account? <a className="mx-1" href="/signin">Sign In Here.</a>
+                  <li  className="w-100 d-block text-center mx-auto mt-3">
+                      Already have an account? <a className="fa-fade" href="/signin">Sign In Here.</a>
                   </li>
                     
                   {/* </div> */}

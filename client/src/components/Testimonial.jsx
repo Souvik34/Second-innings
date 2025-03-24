@@ -107,7 +107,7 @@ export default function Testimonial() {
                   <i className="fa-solid fa-quote-left quote" style={{ color: "#ff8a8a" }}></i>
                   {testimonial.text}
                 </p>
-                <div className="review-details">
+                <div className="review-details m-2">
                   <div className="image d-flex mx-auto justify-content-center">
                     <figure>
                       <img className="user" src={testimonial.img} alt={testimonial.name} />

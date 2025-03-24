@@ -134,16 +134,16 @@ li {
    
 }
 
-@media (max-width:991px){
-.navbar-expand-lg .navbar-toggler {
+@media (max-width: 992px) {
+  .navbar-expand-lg .navbar-toggler {
     display: block !important;
-}
+  }
 }
 
-@media (max-width: 360px){
-       .navMainTxt{
-        display: none;
-       }
+@media (max-width: 360px) {
+  .navMainTxt {
+    display: none;
+  }
 }
 
 
