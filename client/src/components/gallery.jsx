@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/gallery.css";
+import { useTheme } from "../context/ThemeContext";
 
 // Sample Image Data
 const images = [
@@ -33,9 +34,31 @@ const images = [
 
 
 export default function Gallery() {
+  const { theme } = useTheme();
+  
   return (
+    <>
+    <h2 className="heading my-2">
+  <div className="codebird head-txt">
+  <h1 className="text-brown main-head service-head">
+        <span className="text-warnin" style={{ color: "#15A6BA", fontWeight:"700" }}>
+          OU
+          <span className="text-warn" style={{ color: "#EEE" }}>
+             R{" "}G
+          </span>                 
+          AL
+          <span className="text-warn" style={{ color: "#EEE" }}>
+            L
+          </span> 
+        <span className="text-warnin" style={{ color: "#15A6BA" }}>
+         ERY
+        </span>
+        </span>
+      </h1>
+  </div>
+</h2>
     <div className="gallery-container">
-      <h2 className="gallery-title">Our Gallery</h2>
+      {/* <h2 className="gallery-title">Our Gallery</h2> */}
       <div className="gallery-grid">
         {images.map((img, index) => (
           <div key={index} className="gallery-card">
@@ -44,5 +67,6 @@ export default function Gallery() {
         ))}
       </div>
     </div>
+    </>
   );
 }

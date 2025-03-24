@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from "../context/ThemeContext";
 const RuleandRegulation = () => {
-    const { theme } = useTheme();
+  const { theme } = useTheme();
   return (
     <div>
         <>
