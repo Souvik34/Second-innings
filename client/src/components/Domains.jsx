@@ -48,16 +48,16 @@ export default function Domains() {
         
 
         <div className="container text-center ">
-          <div className="row justify-content-center">
+          <div className="row d-flex gap-5 justify-content-between">
             
             <div  className="col text-center my-auto">
               <div className=""><img src={food} alt="" className=" img-fluid rounded-circle" style={{width:"80%"}} /></div>
-              <div className="fs-4 my-3"><span><a href="/gethome ">Find A Home</a></span></div>             
+              <div className="fs-4 my-3"><span><a className="sub-text" href="/gethome ">Find A Home</a></span></div>             
             </div>
             
             <div  className="col  text-center my-auto">
               <div className=""><img src={train} alt="" className=" img-fluid rounded-circle" style={{width:"80%"}} /></div>
-              <div className="fs-4 my-3"><span> <a href="/adopt">Adopt Parent</a></span></div> 
+              <div className="fs-4 my-3 "><span> <a className="sub-text" href="/adopt">Adopt Parent</a></span></div> 
             </div>
 
            

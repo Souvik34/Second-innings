@@ -41,8 +41,8 @@ export default function Home() {
         </div> */}
         <section className="home-sec">
       <div className="main mb-5  ">
-        <div className="row d-flex mx-auto  ">
-          <div className="text col-sm-5 px-5  ">
+        <div className="row d-flex mx-auto align-items-center">
+          <div className="text col-lg-6 ">
             <div className="codebird">
               <h1 className="text-brown main-head">
                 <span className="text-warnin" style={{ color: "#15A6BA", fontWeight:"700" }}>
@@ -66,7 +66,7 @@ export default function Home() {
                   </span>
               </h1>
             </div>
-            <div className="sub-text my-5 fs-5 text-white">
+            <div className="sub-text my-5 text-white">
               <span>
               Our website can provide comprehensive information about various old age homes, including their location, facilities, services, and the level of care provided. This helps senior citizens and their families make informed decisions about choosing the right home for their specific need. Moreover, our website also caters the condition of adopting a parent. Also, it provides a source of employment as a caregiver or volunteer those who want to look after the aged people.
               </span>
@@ -76,10 +76,11 @@ export default function Home() {
                 Contact Us
               </button>
             </Link> */}
+            <div className="btn-group">
             <a href="tel: 6290374022" target="blank">
               <button
                 type="button"
-                className="btn btn-warning text-dark btn-sm mb-5"
+                className="btn btn-warning text-dark btn-sm my-2"
                 style={{ backgroundColor: "#15A6BF" }}
               >
                 
@@ -91,7 +92,7 @@ export default function Home() {
             <a href="/volunteer" target="blank">
               <button
                 type="button"
-                className="btn btn-warning text-dark btn-sm mb-5"
+                className="btn btn-warning text-dark btn-sm my-2"
                 style={{ backgroundColor: "#15A6BF" }}
               >
                 
@@ -99,16 +100,17 @@ export default function Home() {
                 <span className="text-light"> &nbsp; Become a volunteer</span>
               </button>
             </a>
+            </div>
           </div>
 
-          <span className="col-sm-7 homeCar  ">
+          <div className="col-lg-6 homeCar  ">
             <div  className="container">
               <div  className="image-container">
                 <img src={img} alt="Background" className="home-pic h-5 img-fluid" style={{height:"37rem"}} />
               
               </div>
             </div>
-          </span>
+          </div>
         </div>
       </div>
       {/* DOMAINS */}

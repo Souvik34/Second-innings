@@ -57,8 +57,8 @@ export default function Signin() {
   return (
     <>
       <div className="main mt-5">
-        <div className="row d-flex mx-auto">
-          <div className="text col-sm-6 px-5">
+        <div className="row d-flex mx-auto align-items-center">
+          <div className="text col-lg-6">
             <div className="codebird">
             <h1 className="text-brown main-head service-head">
                 <span className="text-warnin" style={{ color: "#15A6BA", fontWeight:"700" }}>
@@ -79,7 +79,7 @@ export default function Signin() {
                   </span>
                   </h1>  
             </div>
-            <div className="sub-text my-5 fs-5 text-light">
+            <div className="sub-text text-light">
               
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Mollitia dolorum voluptate, laudantium accusantium deserunt eos
@@ -155,7 +155,7 @@ export default function Signin() {
             </div>
           </div>
 
-          <div className="anim col-sm-6 img-fluid mx-auto d-flex">
+          <div className="img-container anim col-lg-6 img-fluid mx-auto d-flex align-items-center justify-content-center">
             <img
               className="home-anim rounded img-fluid mx-auto d-flex"
               src={graphic}

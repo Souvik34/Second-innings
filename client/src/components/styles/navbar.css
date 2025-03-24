@@ -14,10 +14,6 @@ Link {
   font-size: 1.5rem;
 }
 
-.row {
-  width: 100%;
-}
-
 a {
   text-decoration: none;
 }
@@ -52,7 +48,7 @@ li {
 }
 
 .nav-link p {
-  padding: 0 1rem 0 1rem;
+  padding: 0 0.8rem 0 0.8rem;
 }
 .st:hover{
   color: #00d2ff;
@@ -129,3 +125,25 @@ li {
   width: 100%;
   left: 0;
 }
+
+
+@media (max-width: 1200px) {
+  .nav-link p {
+    padding: 0rem;
+  }
+   
+}
+
+@media (max-width: 992px) {
+  .navbar-expand-lg .navbar-toggler {
+    display: block !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .navMainTxt {
+    display: none;
+  }
+}
+
+
