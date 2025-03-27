@@ -20,7 +20,7 @@ function Adopt() {
 
   const [errors, setErrors] = useState({});
 
-  // Regular expressions for validation
+  
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^[0-9]{10}$/;
   const postcodeRegex = /^[0-9]{6}$/;
@@ -69,54 +69,171 @@ function Adopt() {
         Do you think your residence could benefit from staying connected through our "Adopt Parent" program? Register your care home today.
       </div>
 
-      {/* First Name & Last Name */}
-      <div className="row mb-4">
-        <div className="col">
-          <label className="form-label text-white pt-5">First name:</label> {errors.firstName && <span className="text-danger">{errors.firstName}</span>}
-          <input type="text" name="firstName" className="form-control rounded-pill" placeholder="Enter your first name" value={formData.firstName} onChange={handleChange} />
-          
-        </div>
 
-        <div className="col">
-          <label className="form-label text-white pt-5">Last name:</label> {errors.lastName && <span className="text-danger">{errors.lastName}</span>}
-          <input type="text" name="lastName" className="form-control rounded-pill" placeholder="Enter your last name" value={formData.lastName} onChange={handleChange} />
-          
-        </div>
-      </div>
+  <div className=" d-flex flex-column pt-5 me-2 align-items-center"> 
+    <label className="form-label text-white">First name:</label>
+    {errors.firstName && <span className="text-danger">{errors.firstName}</span>}
+    <input
+     style={{ width: "36rem" }}
+      type="text"
+      name="firstName"
+      className={`form-control rounded-pill mb-3 bg-${theme} ${theme === "dark" ? "text-light" : "text-dark"}`}
+      placeholder="Enter your first name"
+      value={formData.firstName}
+      onChange={handleChange}
+    />
+  </div>
 
-      {/* Address Fields */}
-      <label className="form-label text-white">Address line 1:</label>  {errors.address1 && <span className="text-danger">{errors.address1}</span>}
+  {/* Last Name */}
+  <div className=" d-flex flex-column p-0 align-items-center"> 
+    <label className="form-label text-white">Last name:</label>
+    {errors.lastName && <span className="text-danger">{errors.lastName}</span>}
+    <input
+     style={{ width: "36rem" }}
+      type="text"
+      name="lastName"
+      className={`form-control rounded-pill mb-3 bg-${theme} ${theme === "dark" ? "text-light" : "text-dark"}`}
+      placeholder="Enter your last name"
+      value={formData.lastName}
+      onChange={handleChange}
+    />
+  </div>
 
-      <input type="text" name="address1" className="form-control rounded-pill mb-3" placeholder="Enter your address" value={formData.address1} onChange={handleChange} />
-     
-      <label className="form-label text-white">Address line 2:</label>
-      <input type="text" name="address2" className="form-control rounded-pill mb-3" placeholder="Optional" value={formData.address2} onChange={handleChange} />
 
-      <label className="form-label text-white">City/Town:</label> {errors.city && <span className="text-danger">{errors.city}</span>}
-      <input type="text" name="city" className="form-control rounded-pill mb-3" placeholder="Enter your city/town" value={formData.city} onChange={handleChange} />
-      
+{/* Address Line 1 */}
+<div className="d-flex flex-column align-items-center">
+  <label className="form-label text-white">Address line 1:</label>
+  {errors.address1 && <span className="text-danger">{errors.address1}</span>}
+  <input
+    style={{ width: "36rem" }}
+    type="text"
+    name="address1"
+    className={`form-control rounded-pill mb-3 bg-${theme} ${
+      theme === "dark" ? "text-light" : "text-dark"
+    }`}
+    placeholder="Enter your address"
+    value={formData.address1}
+    onChange={handleChange}
+  />
+</div>
 
-      <label className="form-label text-white">Postcode:</label>  {errors.postcode && <span className="text-danger">{errors.postcode}</span>}
-      <input type="text" name="postcode" className="form-control rounded-pill mb-3" placeholder="6-digit postcode" value={formData.postcode} onChange={handleChange} />
-     
+{/* Address Line 2 */}
+<div className="d-flex flex-column align-items-center">
+  <label className="form-label text-white">Address line 2:</label>
+  <input
+    style={{ width: "36rem" }}
+    type="text"
+    name="address2"
+    className={`form-control rounded-pill mb-3 bg-${theme} ${
+      theme === "dark" ? "text-light" : "text-dark"
+    }`}
+    placeholder="Optional"
+    value={formData.address2}
+    onChange={handleChange}
+  />
+</div>
 
-      {/* Email & Phone */}
-      <label className="form-label text-white">E-mail:</label> {errors.email && <span className="text-danger">{errors.email}</span>}
+{/* City */}
+<div className="d-flex flex-column align-items-center">
+  <label className="form-label text-white">City/Town:</label>
+  {errors.city && <span className="text-danger">{errors.city}</span>}
+  <input
+    style={{ width: "36rem" }}
+    type="text"
+    name="city"
+    className={`form-control rounded-pill mb-3 bg-${theme} ${
+      theme === "dark" ? "text-light" : "text-dark"
+    }`}
+    placeholder="Enter your city/town"
+    value={formData.city}
+    onChange={handleChange}
+  />
+</div>
 
-      <input type="email" name="email" className="form-control rounded-pill mb-3" placeholder="Enter your email" value={formData.email} onChange={handleChange} />
-      
-      <label className="form-label text-white">Phone:</label>  {errors.phone && <span className="text-danger">{errors.phone}</span>}
-      <input type="text" name="phone" className="form-control rounded-pill mb-3" placeholder="Enter 10-digit phone number" value={formData.phone} onChange={handleChange} />
-     
+{/* Postcode */}
+<div className="d-flex flex-column align-items-center">
+  <label className="form-label text-blue">Postcode:</label>
+  {errors.postcode && <span className="text-danger">{errors.postcode}</span>}
+  <input
+    style={{ width: "36rem" }}
+    type="text"
+    name="postcode"
+    className={`form-control rounded-pill mb-3 bg-${theme} ${
+      theme === "dark" ? "text-light" : "text-dark"
+    }`}
+    placeholder="6-digit postcode"
+    value={formData.postcode}
+    onChange={handleChange}
+  />
+</div>
 
-      {/* Annual Income */}
-      <label className="form-label text-white">Annual Income:</label> {errors.annualIncome && <span className="text-danger">{errors.annualIncome}</span>}
-      <input type="text" name="annualIncome" className="form-control rounded-pill mb-3" placeholder="Enter your annual income" value={formData.annualIncome} onChange={handleChange} />
-      
+{/* Email */}
+<div className="d-flex flex-column align-items-center">
+  <label className="form-label text-white text-left">E-mail:</label>
+  {errors.email && <span className="text-danger">{errors.email}</span>}
+  <input
+    style={{ width: "36rem" }}
+    type="email"
+    name="email"
+    className={`form-control rounded-pill mb-3 bg-${theme} ${
+      theme === "dark" ? "text-light" : "text-dark"
+    }`}
+    placeholder="Enter your email"
+    value={formData.email}
+    onChange={handleChange}
+  />
+</div>
 
-      {/* Remarks */}
-      <label className="form-label text-white">Remarks:</label>
-      <textarea name="remarks" className="form-control rounded-pill mb-3" rows="4" placeholder="Additional comments (optional)" value={formData.remarks} onChange={handleChange}></textarea>
+{/* Phone */}
+<div className="d-flex flex-column align-items-center">
+  <label className="form-label text-white">Phone:</label>
+  {errors.phone && <span className="text-danger">{errors.phone}</span>}
+  <input
+    style={{ width: "36rem" }}
+    type="text"
+    name="phone"
+    className={`form-control rounded-pill mb-3 bg-${theme} ${
+      theme === "dark" ? "text-light" : "text-dark"
+    }`}
+    placeholder="Enter 10-digit phone number"
+    value={formData.phone}
+    onChange={handleChange}
+  />
+</div>
+
+{/* Annual Income */}
+<div className="d-flex flex-column align-items-center">
+  <label className="form-label text-white">Annual Income:</label>
+  {errors.annualIncome && <span className="text-danger">{errors.annualIncome}</span>}
+  <input
+    style={{ width: "36rem" }}
+    type="text"
+    name="annualIncome"
+    className={`form-control rounded-pill mb-3 bg-${theme} ${
+      theme === "dark" ? "text-light" : "text-dark"
+    }`}
+    placeholder="Enter your annual income"
+    value={formData.annualIncome}
+    onChange={handleChange}
+  />
+</div>
+
+{/* Remarks */}
+<div className="d-flex flex-column align-items-center">
+  <label className="form-label text-white">Remarks:</label>
+  <textarea
+    style={{ width: "36rem" }}
+    name="remarks"
+    className={`form-control rounded-pill mb-3 bg-${theme} ${
+      theme === "dark" ? "text-light" : "text-dark"
+    }`}
+    rows="4"
+    placeholder="Additional comments (optional)"
+    value={formData.remarks}
+    onChange={handleChange}
+  ></textarea>
+</div>
+
 
       <div className='d-block mx-auto text-center'>
         <button type="submit" className={`btn ${theme === "light" ? "btn-primary" : "btn-light"} m-4`}>Submit</button>
