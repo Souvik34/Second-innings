@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTheme } from "../context/ThemeContext";
 import { Link } from "react-router-dom";
 import "./styles/adopt.css";
+import { Link} from "react-router-dom";
 
 function Adopt() {
   const { theme } = useTheme();
@@ -67,6 +68,44 @@ function Adopt() {
 
       <div className="row mb-5 text-light fs-4">
         Do you think your residence could benefit from staying connected through our "Adopt Parent" program? Register your care home today.
+                <span className="text-warnin" style={{ color: "#15A6BA", fontWeight:"700" }}>
+                  AD
+                  <span className="text-warn" style={{ color: "#EEE" }}>
+                    OP
+                  </span>                 
+                  T
+                  <span className="text-warn" style={{ color: "#EEE" }}>
+                    {" "}P
+                  </span> 
+                <span className="text-warnin" style={{ color: "#15A6BA" }}>
+                  AR
+                  <span className="text-warn" style={{ color: "#EEE" }}>
+                    E
+                  </span>                 
+                  NT
+                  <span className="text-warn" style={{ color: "#EEE" }}>
+                    S
+                  </span>  
+                </span>
+                </span>
+              </h1>
+          </div>
+        </h2>
+
+<div className="mb-5 sub-text text-light">Do you think your residence could benefit from staying connected through our "Adopt Parent" program? If so, then register your care home today. <br /> Fill out the following form, and a member of your family will be in touch should be in touch for the complete process.</div>
+
+  <div  className="mb-4">
+    <div  className="col">
+      <div  className="form-outline mb-4">
+        <input type="text" id="form6Example1"  className={`form-control ${theme === "light" ? "bg-white text-dark" : "bg-dark text-light"}`} placeholder='First Name' />
+        <label  className="form-label" for="form6Example1"></label>
+      </div>
+    </div>
+    <div  className="col">
+      <div  className="form-outline mb-4">
+        <input type="text" id="form6Example2"  className={`form-control ${theme === "light" ? "bg-white text-dark" : "bg-dark text-light"}`} placeholder='Last Name' />
+        <label  className="form-label" for="form6Example2"></label>
+
       </div>
 
 
@@ -84,7 +123,8 @@ function Adopt() {
     />
   </div>
 
-  {/* Last Name */}
+
+  
   <div className=" d-flex flex-column p-0 align-items-center"> 
     <label className="form-label text-white">Last name:</label>
     {errors.lastName && <span className="text-danger">{errors.lastName}</span>}
@@ -97,10 +137,14 @@ function Adopt() {
       value={formData.lastName}
       onChange={handleChange}
     />
+    <div className='d-block mx-auto text-center'>
+  <a type="submit" href="mailto: secondinnings23@gmail.com" className={`btn ${theme === "light" ? "btn-primary" : "btn-light"} m-4`}>Submit</a>
+  <br></br>
+  <Link to="/ruleandregulation" className='text-danger d-flex justify-content-left fs-2'>*** Rules & Regulations!!! ***</Link>
+
   </div>
 
 
-{/* Address Line 1 */}
 <div className="d-flex flex-column align-items-center">
   <label className="form-label text-white">Address line 1:</label>
   {errors.address1 && <span className="text-danger">{errors.address1}</span>}
@@ -117,7 +161,7 @@ function Adopt() {
   />
 </div>
 
-{/* Address Line 2 */}
+
 <div className="d-flex flex-column align-items-center">
   <label className="form-label text-white">Address line 2:</label>
   <input
@@ -133,7 +177,7 @@ function Adopt() {
   />
 </div>
 
-{/* City */}
+
 <div className="d-flex flex-column align-items-center">
   <label className="form-label text-white">City/Town:</label>
   {errors.city && <span className="text-danger">{errors.city}</span>}
@@ -150,7 +194,7 @@ function Adopt() {
   />
 </div>
 
-{/* Postcode */}
+
 <div className="d-flex flex-column align-items-center">
   <label className="form-label text-blue">Postcode:</label>
   {errors.postcode && <span className="text-danger">{errors.postcode}</span>}
@@ -167,7 +211,7 @@ function Adopt() {
   />
 </div>
 
-{/* Email */}
+
 <div className="d-flex flex-column align-items-center">
   <label className="form-label text-white text-left">E-mail:</label>
   {errors.email && <span className="text-danger">{errors.email}</span>}
@@ -184,7 +228,7 @@ function Adopt() {
   />
 </div>
 
-{/* Phone */}
+
 <div className="d-flex flex-column align-items-center">
   <label className="form-label text-white">Phone:</label>
   {errors.phone && <span className="text-danger">{errors.phone}</span>}
@@ -201,7 +245,7 @@ function Adopt() {
   />
 </div>
 
-{/* Annual Income */}
+
 <div className="d-flex flex-column align-items-center">
   <label className="form-label text-white">Annual Income:</label>
   {errors.annualIncome && <span className="text-danger">{errors.annualIncome}</span>}
@@ -218,7 +262,7 @@ function Adopt() {
   />
 </div>
 
-{/* Remarks */}
+
 <div className="d-flex flex-column align-items-center">
   <label className="form-label text-white">Remarks:</label>
   <textarea

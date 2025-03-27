@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <div className="mt-5">
       <section className={`bg-${theme} rounded ${theme === 'light' ? 'text-dark' : 'text-white'}`}>
-      <footer className="text-center text-lg-start">
+      <footer className="text-lg-start">
         {/* <section className="d-flex justify-content-between p-4 bg-light text-dark shadow rounded">
           <div className="me-5">
             <span>Be Our Member </span>
@@ -63,9 +63,9 @@ export default function Footer() {
         </section> */}
 
         <section className={`bg-${theme} shadow rounded border ${theme === 'light' ? 'text-dark' : 'text-white'} border-${theme}`}>
-          <div className="container text-center text-md-start mt-4">
+          <div className="text-md-start mt-4">
             <div className="row mt-4">
-              <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-4">
+              <div className="col-md-12 col-lg-4 col-xl-3 mx-auto mb-4 mt-4">
                 <h6 className=" fw-bold">Second Innings - A Perfect Home, Away From Home</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto hr1" />
                 <p className={`${theme === 'light' ? 'text-dark' : 'text-white'}`}>
@@ -120,7 +120,7 @@ export default function Footer() {
                 </p>
               </div> */}
 
-              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 mt-4">
+              <div className="col-md-12 col-lg-2 col-xl-2 mx-auto mb-4 mt-4">
                 <h6 className="text-uppercase fw-bold">Nav links</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto hr3" />
                 <p>
@@ -168,7 +168,7 @@ export default function Footer() {
                 {/* Chatbot */}
               </div>
 
-              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-4 last">
+              <div className="col-md-12 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-4 last">
                 <h6 className="text-uppercase fw-bold">Contact Us</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto hr4" />
                 <p>
@@ -181,7 +181,7 @@ export default function Footer() {
                 </p>
                 <p>
                   <i className="fas fa-phone mr-3"></i>{" "}
-                  <a href="tel: 6290374022" className="text-dark">1800 111 363</a>
+                  <a href="tel: 6290374022" className={theme === "light" ? "text-dark" : "text-white"}>1800 111 363</a>
                 </p>
                 <h6 className="text-uppercase fw-bold mt-4">Connect with us</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto hr4" />

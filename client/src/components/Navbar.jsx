@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles/navbar.css";
-import "./styles/darkmode.css";
 import navpic from "./images/logo.png";
 import { useTheme } from "../context/ThemeContext";
 import { BsSunFill, BsMoonFill } from "react-icons/bs"
@@ -15,7 +14,7 @@ export default function Navbar() {
       <nav className={`navbar navbar-expand-lg bg-gradient ${theme === "light" ? "bg-light navbar-light" : "bg-dark navbar-dark"} rounded`}>
         <div className="container-fluid">
           <img className="mx-1" src={navpic} alt="" height="60" width="60" />
-          <Link className="navbar-brand col-md-1 mx-1 text-center" to="/">
+          <Link className="navbar-brand mx-1 text-center" to="/">
             <p className={`navMainTxt mt-3 fw-bold fs-3 ${theme === "light" ? "text-dark" : "text-light"}`}>
               SECOND INNINGS
               {/* <p style={{ fontSize: "12px" }}>The Coding Club of UIT, BU</p> */}
@@ -37,10 +36,7 @@ export default function Navbar() {
             className="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
-            <nav  className="navbar navbar-expand-lg bg-body-tertiary">
-              <div  className="container-fluid  ">
-                <div  className="collapse navbar-collapse  " id="navbarNavDropdown">
-                  <ul  className="navbar-nav  fs-5 align-items-center">
+          <ul  className="navbar-nav  fs-5 align-items-center">
                     <li  className="nav-item">
                       <Link className="nav-link" to="/">
                         <p className={`text-center fw-bold st mb-0 ${theme === "light" ? "text-dark" : "text-white"}`}>Home</p>
@@ -85,10 +81,7 @@ export default function Navbar() {
                         </button>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </nav>
-            {/* <ul className="navbar-nav nav justify-content-left mr-auto mx-2 d-flex justify-content-center"> */}
+           
           </div>
         </div>
       </nav>

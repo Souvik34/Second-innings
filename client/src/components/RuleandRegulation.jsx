@@ -33,8 +33,8 @@ const RuleandRegulation = () => {
         </h2>
 <br></br>
 <br></br>
-<div className='container d-flex flex-row gap-3 justify-content-center mt-5 text-white'>
-<p>
+<div className="container d-flex flex-wrap align-items-start gap-5  justify-content-left mt-5 text-white">
+<div className="d-flex flex-column col-lg-5">
 <h4><b>1. Eligibility Criteria</b></h4>
 <b>✅ For Adopters:</b>
 <br></br>
@@ -46,17 +46,16 @@ const RuleandRegulation = () => {
 -Must be registered with Second Innings via a trusted source.<br></br>
 - Should provide basic medical/personal history and give voluntary consent.<br></br>
 <hr></hr>
-</p>
-
-<p>
+</div>
+<div className='d-flex flex-column col-lg-5'>
 <h4><b>2. Application & Verification</b></h4>
 📌 <b>Step 1:</b> Adopters submit an application with proof of stability.<br></br>
 📌 <b>Step 2:</b> Screening via document verification & interview.<br></br>
 📌 <b>Step 3:</b> Elderly individual can accept or decline the adoption request.<br></br>
 <hr></hr>
-</p>
-<p>
-<h4><b>3. Rights & Responsibilities</b></h4>
+</div>
+<div className="d-flex flex-column col-lg-5">
+<h4><b> 3. Rights & Responsibilities</b></h4>
 <b>⚖️ For Adopters:</b>
 <br></br>
 -Ensure respect, dignity, and well-being.<br></br>
@@ -68,21 +67,21 @@ const RuleandRegulation = () => {
 -Must respect the adopter’s boundaries.<br></br>
 -Can report misconduct for intervention.<br></br>
 <hr></hr>
-</p>
-<p>
-<h4><b>4. Prohibited Actions</b></h4>
+</div>
+<div className="d-flex flex-column col-lg-5">
+<h4><b> 4. Prohibited Actions</b></h4>
 🚫 No abuse, coercion, or financial fraud.<br></br>
 🚫 No legal claims over property/inheritance.<br></br>
 🚫 No commercial exploitation/publicity.<br></br>
 🚫 Confidentiality must be maintained.<br></br>
 <hr></hr>
-</p>
-<p>
-<h4><b>5. Termination & Dispute Resolution</b></h4>
+</div>
+<div className="d-flex flex-column col-lg-5">
+<h4><b> 5. Termination & Dispute Resolution</b></h4>
 📢 Either party may exit with a 30-day notice, except in abuse cases.<br></br>
 📢 Second Innings will mediate disputes; violations may lead to legal action or removal.<br></br>
 <hr></hr>
-</p>
+</div>
 </div>
 </>
     </div>
