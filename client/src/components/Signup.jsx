@@ -151,7 +151,7 @@ export default function SignUp() {
                       required
                     />
                   </li>
-
+ 
                   <li>
                   <label for="passcode" className="text-white p-2">🔐Password:</label>
                   <div className="d-flex relative align-items-center">
