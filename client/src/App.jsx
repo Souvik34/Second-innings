@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
@@ -10,34 +10,32 @@ import Error from "./components/Error";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
 import Gethome from "./components/Gethome";
+
+import Gallery from "./components/gallery";
+
 import Gallery from "./components/gallery.jsx";
+
 import Adopt from "./components/Adopt";
 import Volunteer from "./components/Volunteer";
-// import Faq from "./components/Faq";
 import SignUp from "./components/Signup";
 import SignIn from "./components/Signin";
 import RuleandRegulation from "./components/ruleandregulation.jsx";
 import Lottie from "lottie-react";
 import lottie from "./components/images/loading.json";
-import {useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loadUser } from "./redux/action.js"
 import toast from "react-hot-toast";
 
-
-// import GetLocation from "./components/GetLocation";
-// import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-
-// import AlanAI from "../src/components/AlanAI";
-// import alanBtn from "@alan-ai/alan-sdk-web";
-
 function App() {
   const dispatch = useDispatch();
-  const { error, message, loading } = useSelector(
+  const { error, message, loading: userLoading } = useSelector(
     (state) => state.user
   );
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    dispatch(loadUser());
+    setLoading(true);
+    dispatch(loadUser()).finally(() => setLoading(false));
   }, [dispatch]);
 
   useEffect(() => {
@@ -65,23 +63,16 @@ function App() {
     }
   }, []);
 
-  // const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3000);
-  // }, []);
-
   return (
     <>
-      {loading ? (
-        <Lottie
-          className="lottie d-flex mx-auto"
-          animationData={lottie}
-          background="transparent"
-        />
-        
+      {loading || userLoading ? (
+        <div className="loader-container">
+          <Lottie
+            className="lottie"
+            animationData={lottie}
+            background="transparent"
+          />
+        </div>
       ) : (
         <BrowserRouter>
           <ScrollToTop />
@@ -89,7 +80,6 @@ function App() {
 
           <Routes>
             <Route exact path="/" element={<Home key="home" />}></Route>
-            
             <Route
               exact
               path="faq"
@@ -100,7 +90,6 @@ function App() {
               path="gethome"
               element={<Gethome key="gethome" />}
             ></Route>
-          
             <Route
               exact
               path="adopt"
@@ -111,10 +100,14 @@ function App() {
               path="ruleandregulation"
               element={<RuleandRegulation key="ruleandregulation" />}
             ></Route>
+
+            <Route exact path="gallery" element={<Gallery />} />
+
              <Route 
              exact 
              path="gallery" 
              element= {<Gallery key="gallery"/>}/>
+
             <Route
               exact
               path="signin"
