@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      target: final-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      target: nginx
+    ports:
+      - 3000:80
+    env_file:
+      - .env
+    
+    depends_on:
+      - backend
+
+
